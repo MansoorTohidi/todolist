@@ -7,6 +7,7 @@ const Item = function (number, item, deleteItem) {
 
 const input = document.getElementById("input");
 const tasks = document.getElementById("tasks");
+const bAdd  = document.getElementById("bAdd");
 
 
 function additem(e) {
@@ -51,3 +52,16 @@ function handleDelete(e) {
   }
 
 }
+
+
+
+
+
+bAdd.addEventListener('touchend', function(e) {
+  e.target.style.color="white"
+  e.target.style.backgroundColor="purple"
+  setTimeout(() => {
+    e.target.style.color="white"
+    e.target.style.backgroundColor="#455d7a"
+  }, 300);
+});
